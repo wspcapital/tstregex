@@ -26,27 +26,20 @@ package main
 			if flat!=nil && len(flat[0]) > 0{
 				fmt.Println("Flat Num:",flat[0])
 				homeStr=reFlat.ReplaceAllString(strAddress, "")
-				addrStr=reString.FindAllString(strings.TrimSpace(homeStr),1)
-				restAddr := reString.ReplaceAllString(homeStr, "")
-
-				if reHome.MatchString(restAddr){
-                                        numHome=restAddr
-                                } else {
-					numHome=""
-				}
 			} else {
 				homeStr=strAddress
-                                addrStr=reString.FindAllString(strings.TrimSpace(homeStr),1)
-				restAddr := reString.ReplaceAllString(homeStr, "")
-
-				if reHome.MatchString(restAddr){
-					numHome=restAddr
-				} else {
-					numHome=""
-				}
 			}
-		}
 
-		fmt.Println("Street Name:", addrStr[0])
-		fmt.Println("Home Num:", numHome)
+			addrStr=reString.FindAllString(strings.TrimSpace(homeStr),1)
+                        restAddr := reString.ReplaceAllString(homeStr, "")
+			if reHome.MatchString(restAddr){
+                                 numHome=restAddr
+                         } else {
+                                 numHome=""
+                         }
+			 fmt.Println("Street Name:", addrStr[0])
+			 fmt.Println("Home Num:", numHome)
+		} else {
+			fmt.Println("Indicate Address for parsing")
+		}
 	}
