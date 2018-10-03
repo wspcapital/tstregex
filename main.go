@@ -43,3 +43,8 @@ package main
 			fmt.Println("Indicate Address for parsing")
 		}
 	}
+	/*
+		Run example 
+		$ ./tstlin -address="10a Waterloo Street"
+		OS: Ubuntu
+	*/
