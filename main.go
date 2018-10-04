@@ -46,5 +46,6 @@ package main
 	/*
 		Run example 
 		$ ./tstlin -address="10a Waterloo Street"
-		OS: Ubuntu
+		OS Ubuntu: $ ./tstlin -address="10a Waterloo Street"
+		OS OSX: $ ./tstosx -address="10a Waterloo Street"
 	*/
